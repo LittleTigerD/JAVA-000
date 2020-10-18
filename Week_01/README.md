@@ -3,6 +3,7 @@
 自己分析一下对应的字节码，有问题群里讨论。
 2、自定义一个Classloader，加载一个Hello.xlass 文件，执行hello 方法，此文件内
 容是一个Hello.class 文件所有字节（x=255-x）处理后的文件。文件群里提供。
+文件名为：DouhuClassLoader.java
 3、画一张图，展示Xmx、Xms、Xmn、Meta、DirectMemory、Xss 这些内存参数的
 关系。
 4、检查一下自己维护的业务系统的JVM 参数配置，用jstat 和jstack、jmap 查看一下
