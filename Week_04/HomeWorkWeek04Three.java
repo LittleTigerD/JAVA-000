@@ -1,7 +1,7 @@
 package com.geekjava0study.demo.week4;
 
 /**
- * 功能描述:
+ * 功能描述: syn关键字
  *
  * @Author: 窦虎
  * @Date: 2020/11/11 0:36
@@ -11,20 +11,13 @@ public class HomeWorkWeek04Three {
     public static void main(String[] args) {
 
         Object lock = new Object();
+        HomeWorkCommonClass common = new HomeWorkCommonClass();
         Thread t = new Thread(() -> {
-            int num = 1000;
-            String s = "";
-            for (int i = 0; i < num; i++) {
-                s += "Java";
-            }
-            System.out.println("t Over");
+            common.getRandom();
             synchronized (lock) {//获取对象锁
                 lock.notify();//子线程唤醒
             }
         });
-        //计时
-        long start = System.currentTimeMillis();
-        System.out.println("start = " + start);
         //启动子线程
         t.start();
         try {
@@ -34,8 +27,7 @@ public class HomeWorkWeek04Three {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        long end = System.currentTimeMillis();
-        System.out.println("end = " + end);
-        System.out.println("end - start = " + (end - start));
+        Integer value = common.getValue();
+        System.out.println("得到的Value:::" + value);
     }
 }

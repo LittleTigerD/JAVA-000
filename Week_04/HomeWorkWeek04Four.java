@@ -3,7 +3,7 @@ package com.geekjava0study.demo.week4;
 import java.util.concurrent.CountDownLatch;
 
 /**
- * 功能描述:
+ * 功能描述: CountDownLatch
  *
  * @Author: 窦虎
  * @Date: 2020/11/11 0:44
@@ -11,21 +11,15 @@ import java.util.concurrent.CountDownLatch;
 public class HomeWorkWeek04Four {
 
     public static void main(String[] args) {
+        HomeWorkCommonClass common = new HomeWorkCommonClass();
         int threadNumber = 1;
         final CountDownLatch cdl = new CountDownLatch(threadNumber);//参数为线程个数
 
         Thread t = new Thread(() -> {
-            int num = 1000;
-            String s = "";
-            for (int i = 0; i < num; i++) {
-                s += "Java";
-            }
-            System.out.println("t Over");
+            common.getRandom();
             cdl.countDown();//此方法是CountDownLatch的线程数-1
         });
 
-        long start = System.currentTimeMillis();
-        System.out.println("start = " + start);
         t.start();
         //线程启动后调用countDownLatch方法
         try {
@@ -33,8 +27,7 @@ public class HomeWorkWeek04Four {
         }catch (InterruptedException e){
             e.printStackTrace();
         }
-        long end = System.currentTimeMillis();
-        System.out.println("end = " + end);
-        System.out.println("end - start = " + (end - start));
+        Integer value = common.getValue();
+        System.out.println("得到的Value:::" + value);
     }
 }
