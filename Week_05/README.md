@@ -1,0 +1,24 @@
+week05hm是第五周作业整个项目，分为3个部分
+douhu-demo-jdbc-starter
+hm01
+hm02
+
+
+douhu-demo-jdbc-starter
+自定义加载jdbc一些基础配置的starter
+
+hm01
+写代码实现Spring的装配bean，作业都在test目录下
+Test01是纯xml注入
+Test02是xml扫包,加了注解
+Test03是纯注解
+
+
+hm02
+JDBC作业
+作业都在test目录下了
+Hm02ApplicationTest1是JDBC的基本CRUD
+Hm02ApplicationTest2是JDBC的事务处理
+Hm02ApplicationTest3是JDBC PreparedStatement
+Hm02ApplicationTest4是JDBC 批处理
+Hm02ApplicationTest5是Hikari 连接池实现crud
