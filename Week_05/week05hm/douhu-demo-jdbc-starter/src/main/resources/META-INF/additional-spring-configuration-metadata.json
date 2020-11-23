@@ -1,0 +1,37 @@
+
+{
+  "groups": [
+    {
+      "name": "douhu.jdbc",
+      "type": "com.douhu.douhudemojdbcstarter.prop.SpringBootPropertiesConfiguration"
+    }
+  ],
+  "properties": [
+    {
+      "name": "douhu.jdbc.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether enable douhujdbc or not.",
+      "defaultValue": true
+    },
+    {
+      "name": "douhu.jdbc.datasource.driverClass",
+      "type": "java.lang.String",
+      "sourceType": "com.douhu.douhudemojdbcstarter.DouhuDemoJdbcStarterApplication"
+    },
+    {
+      "name": "douhu.jdbc.datasource.url",
+      "type": "java.lang.String",
+      "sourceType": "com.douhu.douhudemojdbcstarter.DouhuDemoJdbcStarterApplication"
+    },
+    {
+      "name": "douhu.jdbc.datasource.username",
+      "type": "java.lang.String",
+      "sourceType": "com.douhu.douhudemojdbcstarter.DouhuDemoJdbcStarterApplication"
+    },
+    {
+      "name": "douhu.jdbc.datasource.password",
+      "type": "java.lang.String",
+      "sourceType": "com.douhu.douhudemojdbcstarter.DouhuDemoJdbcStarterApplication"
+    }
+  ]
+}
